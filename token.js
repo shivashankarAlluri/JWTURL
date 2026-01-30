@@ -17,8 +17,9 @@ app.use(
 
 app.use(express.json());
 app.post("/jwt", (req, res) => {
-  const payload={
- "aud": "https://idproxy.kore.com/authorize",
+const payload={
+//  "aud": "https://idproxy.kore.com/authorize",
+"aud": "https://idproxy.eu.kore.ai/authorize",
  "iss": CLIENT_ID,
  "sub": "",
  "isAnonymous": false,
