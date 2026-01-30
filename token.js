@@ -37,13 +37,12 @@ CLIENT_SECRET="LonqHE7zddsy01RkrCN0+o+bNqVQ51Vh2FdcJrRrlQU="
 BOT_ID="st-7ff44e13-62c3-57dc-a184-0fd8e4ff185b"
 app.get("/jwt", (req, res) => {
   const payload = {
-    sub: "user@example.com",
-    iss: CLIENT_ID,
-    aud: "https://idproxy.kore.ai/authorize",
+    appId: CLIENT_ID,
+    sub:"Aptipa",
     exp: Math.floor(Date.now() / 1000) + 60 * 60,
     bot_id: BOT_ID,
   };
   const token = jwt.sign(payload, CLIENT_SECRET, { algorithm: "HS256" });
-  res.json(token);
+  res.json({ jwt: token });
 });
 app.listen(3000, () => console.log("JWT server running on port 3000"));
