@@ -43,6 +43,6 @@ app.get("/jwt", (req, res) => {
     bot_id: BOT_ID,
   };
   const token = jwt.sign(payload, CLIENT_SECRET, { algorithm: "HS256" });
-  res.json({ jwt: token });
+  res.json(token);
 });
 app.listen(3000, () => console.log("JWT server running on port 3000"));
