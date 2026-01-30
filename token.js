@@ -18,14 +18,12 @@ app.use(
 app.use(express.json());
 app.post("/jwt", (req, res) => {
   const payload={
-//  "aud": "https://idproxy.kore.com/authorize",
- "aud":"https://platform.kore.ai/api/oAuth/token",
-
+ "aud": "https://idproxy.kore.com/authorize",
  "iss": CLIENT_ID,
  "sub": "",
  "isAnonymous": false,
 }
   const token = jwt.sign(payload, CLIENT_SECRET, { algorithm: "HS256" });
-  res.json(token);
+  res.json({jwt:token});
 });
 app.listen(3000, () => console.log("JWT server running on port 3000"));
