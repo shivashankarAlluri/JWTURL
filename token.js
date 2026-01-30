@@ -21,7 +21,7 @@ app.post("/jwt", (req, res) => {
  "aud": "https://idproxy.kore.com/authorize",
  "iss": CLIENT_ID,
  "sub": "",
- "isAnonymous": "false",
+ "isAnonymous": false,
 }
   const token = jwt.sign(payload, CLIENT_SECRET, { algorithm: "HS256" });
   res.json(token);
