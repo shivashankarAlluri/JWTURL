@@ -32,9 +32,9 @@
 const express = require("express");
 const jwt = require("jsonwebtoken");
 const app = express();
-CLIENT_ID="cs-715658d0-a92e-5e9c-8ac6-8cb926a34742"
-CLIENT_SECRET="CmV5PINJjMpNbMAlWwCQ7vkZw+rNTgsAZtgW+D7MXiY="
-BOT_ID="st-6279fb06-4b17-5e1e-a810-8fc35f6ba7f3"
+CLIENT_ID="cs-8382e2d8-23af-560c-b576-08cc20c52cb8"
+CLIENT_SECRET="LonqHE7zddsy01RkrCN0+o+bNqVQ51Vh2FdcJrRrlQU="
+BOT_ID="st-7ff44e13-62c3-57dc-a184-0fd8e4ff185b"
 app.get("/jwt", (req, res) => {
   const payload = {
     sub: "user@example.com",
