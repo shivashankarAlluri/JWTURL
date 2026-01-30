@@ -3,8 +3,8 @@ const jwt = require("jsonwebtoken");
 const app = express();
 const cors = require("cors");
 
-CLIENT_ID="cs-81a5650b-7d12-5f7c-a89f-0ac9b3cb8a7a"
-CLIENT_SECRET="MBaw9tErsucR8xZw3uc/Jp3ITJhXncS9xDNKtkzdJdk="
+CLIENT_ID="cs-8382e2d8-23af-560c-b576-08cc20c52cb8"
+CLIENT_SECRET="LonqHE7zddsy01RkrCN0+o+bNqVQ51Vh2FdcJrRrlQU="
 BOT_ID="st-7ff44e13-62c3-57dc-a184-0fd8e4ff185b"
 
 app.use(
