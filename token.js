@@ -27,7 +27,7 @@ app.post("/jwt", (req, res) => {
     }
 
     const payload = {
-      aud: "https://idproxy.eu.kore.ai/authorize",
+      aud: "https://idproxy.kore.ai/authorize",
       iss: CLIENT_ID,
       sub: identity,
       isAnonymous: isAnonymous === true || isAnonymous === "true",
