@@ -35,7 +35,7 @@ app.post("/jwt", (req, res) => {
 
     const token = jwt.sign(payload, CLIENT_SECRET, {
       algorithm: "HS256",
-      expiresIn: "5m",
+      expiresIn: "1d",
     });
 
     res.json({ jwt: token });
